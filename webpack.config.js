@@ -20,7 +20,10 @@ module.exports = {
             // other preprocessors should work out of the box, no loader config like this necessary.
             'scss': 'vue-style-loader!css-loader!sass-loader',
             'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
-          }
+          },
+          postcss: [
+            require('postcss-cssnext')()
+          ]
           // other vue-loader options go here
         }
       },
@@ -41,7 +44,7 @@ module.exports = {
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      'src': './'
+      'src': path.resolve(__dirname, 'src')
     }
   },
   devServer: {
