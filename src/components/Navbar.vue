@@ -1,5 +1,5 @@
 <template>
-  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" :class="{ 'navbar-default--transparent': navbarShouldTransparent }">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -34,7 +34,27 @@
 
 <script>
   export default {
-    name: 'Navbar'
+    name: 'Navbar',
+
+    data() {
+      return {
+        navbarShouldTransparent: true
+      }
+    },
+
+    methods: {
+      handleScroll () {
+        this.navbarShouldTransparent = window.scrollY === 0
+      }
+    },
+
+    mounted () {
+      window.addEventListener('scroll', this.handleScroll)
+    },
+
+    beforeDestory () {
+      window.removeEventListener('scroll', this.handleScroll)
+    }
   }
 </script>
 
@@ -96,43 +116,42 @@
     background-color: transparent;
   }
 
-  @media (min-width: 768px) {
-    .navbar-default {
-      background-color: transparent;
-      border-color: transparent;
-    }
-    .navbar-default .navbar-header .navbar-brand {
+  .navbar-default--transparent {
+    background-color: transparent;
+    border-color: transparent;
+
+    .navbar-header .navbar-brand {
       color: rgba(255, 255, 255, 0.7);
     }
-    .navbar-default .navbar-header .navbar-brand:hover,
-    .navbar-default .navbar-header .navbar-brand:focus {
+    .navbar-header .navbar-brand:hover,
+    .navbar-header .navbar-brand:focus {
       color: white;
     }
-    .navbar-default .nav > li > a,
-    .navbar-default .nav > li > a:focus {
+    .nav > li > a,
+    .nav > li > a:focus {
       color: rgba(255, 255, 255, 0.7);
     }
-    .navbar-default .nav > li > a:hover,
-    .navbar-default .nav > li > a:focus:hover {
+    .nav > li > a:hover,
+    .nav > li > a:focus:hover {
       color: white;
     }
-    .navbar-default.affix {
+    &.affix {
       background-color: white;
       border-color: rgba(34, 34, 34, 0.1);
     }
-    .navbar-default.affix .navbar-header .navbar-brand {
+    &.affix .navbar-header .navbar-brand {
       color: #222222;
     }
-    .navbar-default.affix .navbar-header .navbar-brand:hover,
-    .navbar-default.affix .navbar-header .navbar-brand:focus {
+    &.affix .navbar-header .navbar-brand:hover,
+    &.affix .navbar-header .navbar-brand:focus {
       color: #fdcc52;
     }
-    .navbar-default.affix .nav > li > a,
-    .navbar-default.affix .nav > li > a:focus {
+    &.affix .nav > li > a,
+    &.affix .nav > li > a:focus {
       color: #222222;
     }
-    .navbar-default.affix .nav > li > a:hover,
-    .navbar-default.affix .nav > li > a:focus:hover {
+    &.affix .nav > li > a:hover,
+    &.affix .nav > li > a:focus:hover {
       color: #fdcc52;
     }
   }
