@@ -5,6 +5,8 @@
 
     <HeaderSection></HeaderSection>
 
+    <GuideSection></GuideSection>
+
     <FeaturesWithImgSection></FeaturesWithImgSection>
 
     <Download></Download>
@@ -28,6 +30,7 @@
   import SocialSection from './components/SocialSection.vue'
   import Footerbar from './components/Footerbar.vue'
   import FeaturesWithImgSection from './components/FeaturesWithImgSection.vue'
+  import GuideSection from './components/GuideSection.vue'
 
   export default {
     name: 'app',
@@ -39,7 +42,8 @@
       GetStartedSection,
       SocialSection,
       Footerbar,
-      FeaturesWithImgSection
+      FeaturesWithImgSection,
+      GuideSection
     }
   }
 </script>

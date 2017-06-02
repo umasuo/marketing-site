@@ -1,5 +1,6 @@
 <template>
-  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" :class="{ 'navbar-default--transparent': navbarShouldTransparent }">
+  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top"
+       :class="{ 'navbar-default--transparent': navbarShouldTransparent }">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -117,42 +118,44 @@
   }
 
   .navbar-default--transparent {
-    background-color: transparent;
-    border-color: transparent;
+    @media (min-width: 768px) {
+      background-color: transparent;
+      border-color: transparent;
 
-    .navbar-header .navbar-brand {
-      color: rgba(255, 255, 255, 0.7);
-    }
-    .navbar-header .navbar-brand:hover,
-    .navbar-header .navbar-brand:focus {
-      color: white;
-    }
-    .nav > li > a,
-    .nav > li > a:focus {
-      color: rgba(255, 255, 255, 0.7);
-    }
-    .nav > li > a:hover,
-    .nav > li > a:focus:hover {
-      color: white;
-    }
-    &.affix {
-      background-color: white;
-      border-color: rgba(34, 34, 34, 0.1);
-    }
-    &.affix .navbar-header .navbar-brand {
-      color: #222222;
-    }
-    &.affix .navbar-header .navbar-brand:hover,
-    &.affix .navbar-header .navbar-brand:focus {
-      color: #fdcc52;
-    }
-    &.affix .nav > li > a,
-    &.affix .nav > li > a:focus {
-      color: #222222;
-    }
-    &.affix .nav > li > a:hover,
-    &.affix .nav > li > a:focus:hover {
-      color: #fdcc52;
+      .navbar-header .navbar-brand {
+        color: rgba(255, 255, 255, 0.7);
+      }
+      .navbar-header .navbar-brand:hover,
+      .navbar-header .navbar-brand:focus {
+        color: white;
+      }
+      .nav > li > a,
+      .nav > li > a:focus {
+        color: rgba(255, 255, 255, 0.7);
+      }
+      .nav > li > a:hover,
+      .nav > li > a:focus:hover {
+        color: white;
+      }
+      &.affix {
+        background-color: white;
+        border-color: rgba(34, 34, 34, 0.1);
+      }
+      &.affix .navbar-header .navbar-brand {
+        color: #222222;
+      }
+      &.affix .navbar-header .navbar-brand:hover,
+      &.affix .navbar-header .navbar-brand:focus {
+        color: #fdcc52;
+      }
+      &.affix .nav > li > a,
+      &.affix .nav > li > a:focus {
+        color: #222222;
+      }
+      &.affix .nav > li > a:hover,
+      &.affix .nav > li > a:focus:hover {
+        color: #fdcc52;
+      }
     }
   }
 </style>

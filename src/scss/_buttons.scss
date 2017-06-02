@@ -34,3 +34,16 @@ btn {
   padding: 15px 45px;
   font-size: 11px;
 }
+
+.btn-outline--primary {
+  color: $primary-color;
+  border-color: $primary-color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: white;
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+}
