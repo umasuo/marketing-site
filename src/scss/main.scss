@@ -1,0 +1,15 @@
+@import 'bootstrap-custom';
+
+body {
+  min-width: 1080px;
+}
+
+// disable bootstrap responsive
+.container {
+  width: 1080px !important;
+}
+
+@import 'topbar';
+@import 'jumbotron';
+@import 'helper';
+@import 'footer';
