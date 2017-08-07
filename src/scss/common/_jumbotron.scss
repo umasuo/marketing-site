@@ -1,0 +1,19 @@
+.title-desc-jumbotron {
+  height: 520px;
+  color: #fff;
+
+  h1 {
+    font-size: 40px;
+    margin: 170px 0 40px 0;
+    font-weight: 600px;
+  }
+
+  p {
+    font-size: 40px;
+    font-weight: 100;
+  }
+
+  &--chanpin {
+    background: no-repeat center/cover url('/static/img/chanpin/imge2.png');
+  }
+}

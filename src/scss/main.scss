@@ -9,10 +9,11 @@ body {
   width: 1080px !important;
 }
 
-@import 'topbar';
+@import 'common/topbar';
+@import 'common/footer';
+@import 'common/jumbotron';
 @import 'partial';
 @import 'helper';
-@import 'footer';
 
 // index
 @import 'index/jumbotron';
@@ -21,3 +22,6 @@ body {
 @import 'index/stratage';
 @import 'index/cooperate';
 @import 'index/cooperate2';
+
+// chanpin
+@import 'chanpin/app';

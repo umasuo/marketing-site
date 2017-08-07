@@ -1,12 +1,3 @@
--
-  var items = {
-    '/': '首页',
-    '/chanpinyufuwu.html': '产品与服务',
-    '/zhinengjiejuefangan.html': '智能解决方案',
-    '/zizhuyunweipingtai.html': '自助运维平台',
-    '/lianxiwomen.html': '联系我们'
-  }
-
 nav(class='topbar navbar navbar-default')
   div(class='container')
 
@@ -16,7 +7,7 @@ nav(class='topbar navbar navbar-default')
 
     div(class='collapse navbar-collapse')
       ul(class='nav navbar-nav')
-        each item, path in items
+        each item, path in navitems
           li(class = (path === current  && 'active'))
             a(href = path)= item
 
