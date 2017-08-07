@@ -1,3 +1,12 @@
+-
+  var items = {
+    '/': '首页',
+    '/chanpinyufuwu.html': '产品与服务',
+    '/zhinengjiejuefangan.html': '智能解决方案',
+    '/zizhuyunweipingtai.html': '自助运维平台',
+    '/lianxiwomen.html': '联系我们'
+  }
+
 nav(class='topbar navbar navbar-default')
   div(class='container')
 
@@ -7,16 +16,9 @@ nav(class='topbar navbar navbar-default')
 
     div(class='collapse navbar-collapse')
       ul(class='nav navbar-nav')
-        li(class='active')
-          a(href='#') 首页
-        li
-          a(href='#') 产品与服务
-        li
-          a(href='#') 智能解决方案
-        li
-          a(href='#') 自助运维平台
-        li
-          a(href='#') 联系我们
+        each item, path in items
+          li(class = (path === current  && 'active'))
+            a(href = path)= item
 
       div(class='navbar-right')
         a(class='btn btn-link topbar__login-btn') 登录
