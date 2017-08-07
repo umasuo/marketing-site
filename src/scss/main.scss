@@ -12,7 +12,7 @@ body {
 @import 'common/topbar';
 @import 'common/footer';
 @import 'common/jumbotron';
-@import 'partial';
+@import 'common/partial';
 @import 'helper';
 
 // index
@@ -25,3 +25,4 @@ body {
 
 // chanpin
 @import 'chanpin/app';
+@import 'chanpin/yunying';
