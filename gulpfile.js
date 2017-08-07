@@ -3,7 +3,8 @@
 var gulp = require('gulp')
 var postcss = require('gulp-postcss')
 var sass = require('gulp-sass')
-var pug = require('gulp-pug');
+var pug = require('gulp-pug')
+var watch = require('gulp-watch')
 var browserSync = require('browser-sync').create();
 
 gulp.task('css', function () {
@@ -48,9 +49,15 @@ gulp.task('watch', ['views', 'css', 'copy'], function () {
     }
   })
 
-  gulp.watch('./src/static/**/*', ['copy'])
-  gulp.watch('./src/**/*.pug', ['views:watch'])
-  gulp.watch('./src/scss/**/*.scss', ['css:watch'])
+  watch('./src/static/**/*', function () {
+    gulp.start('copy')
+  })
+  watch('./src/**/*.pug', function () {
+    gulp.start('views:watch')
+  })
+  watch('./src/scss/**/*.scss', function () {
+    gulp.start('css:watch')
+  })
 })
 
 // developing (with live reload)
