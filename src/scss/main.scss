@@ -11,12 +11,13 @@ body {
 
 @import 'topbar';
 @import 'partial';
-@import 'jumbotron';
-@import 'product-and-services';
-@import 'feature';
-@import 'stratage';
-@import 'cooperate';
-@import 'cooperate2';
-
 @import 'helper';
 @import 'footer';
+
+// index
+@import 'index/jumbotron';
+@import 'index/product-and-services';
+@import 'index/feature';
+@import 'index/stratage';
+@import 'index/cooperate';
+@import 'index/cooperate2';
