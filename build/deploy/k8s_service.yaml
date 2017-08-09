@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: marketing-site
+  labels:
+    name: marketing-site
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 3000
+      nodePort: 30301
+  selector:
+    name: marketing-site
