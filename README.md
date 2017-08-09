@@ -9,10 +9,10 @@ npm install
 yarn install
 
 # live reload when developing
-grunt
+yarn run dev
 
 # build into 'dist'
-grunt build
+yarn run build
 ```
 
 pug doc: https://pugjs.org/api/getting-started.html

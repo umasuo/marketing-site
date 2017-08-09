@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "docker": "node build/docker.js",
+    "dev": "gulp",
     "build": "gulp build"
   },
   "dependencies": {
