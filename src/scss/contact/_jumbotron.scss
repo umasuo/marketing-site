@@ -1,5 +1,5 @@
-.lianxi-jumbotron {
-  background: no-repeat center/cover url('/static/img/lianxiwomen/imge2.jpg');
+.contact-jumbotron {
+  background: no-repeat center/cover url('/static/img/contact/imge2.jpg');
   height: 520px;
   color: #fff;
   text-align: center;
@@ -46,15 +46,15 @@
   }
 }
 
-.lianxi-tags {
-  background: repeat-x bottom/cover url('/static/img/lianxiwomen/bj1.png');
+.contact-tags {
+  background: repeat-x bottom/cover url('/static/img/contact/bj1.png');
   margin-top: 200px;
   height: 274px;
 
   &__tag {
     font-size: 36px;
     text-align: center;
-    background: no-repeat center/cover url('/static/img/lianxiwomen/qipao_icon.png');
+    background: no-repeat center/cover url('/static/img/contact/qipao_icon.png');
     width: 276px;
     height: 126px;
     color: #fff;

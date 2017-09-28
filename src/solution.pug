@@ -6,38 +6,38 @@ html(lang="zh")
   body
     include partials/common/topbar.pug
 
-    .fangan-viewer
+    .solution-viewer
       .container
-        .fangan-viewer__wrapper
-          ul.fangan-viewer__categories
+        .solution-viewer__wrapper
+          ul.solution-viewer__categories
             li(
               v-for='(value, key) in categories',
               @click='selectedCategory = key',
               :class='{ active: selectedCategory === key }'
             ) {{key}}
 
-          ul.fangan-viewer__products
+          ul.solution-viewer__products
             li(
               v-for='(value, key) in categories[selectedCategory]',
               @click='selectedProduct = key',
               :class='{ active: selectedProduct === key }'
             ) {{key}}
 
-          .fangan-viewer__detail
-            h3.fangan-viewer__title {{ selectedProduct }}
+          .solution-viewer__detail
+            h3.solution-viewer__title {{ selectedProduct }}
 
-            img.fangan-viewer__pic(:src="product.pic")
+            img.solution-viewer__pic(:src="product.pic")
 
-            p.fangan-viewer__desc {{ product.desc }}
+            p.solution-viewer__desc {{ product.desc }}
 
-            .fangan-viewer__swiper
-              img.fangan-viewer__left(
-                src='/static/img/fangan/left_icon.svg',
+            .solution-viewer__swiper
+              img.solution-viewer__left(
+                src='/static/img/solution/left_icon.svg',
                 @click='previousScreen'
               )
-              img.fangan-viewer__screen(:src="product.screens[screenIndex]")
-              img.fangan-viewer__right(
-                src='/static/img/fangan/right_icon.svg',
+              img.solution-viewer__screen(:src="product.screens[screenIndex]")
+              img.solution-viewer__right(
+                src='/static/img/solution/right_icon.svg',
                 @click='nextScreen'
               )
 
@@ -48,7 +48,7 @@ html(lang="zh")
 
     script.
       var viewer = new Vue({
-        el: '.fangan-viewer',
+        el: '.solution-viewer',
         data: {
           categories: {
             '智能网关': {
