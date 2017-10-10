@@ -1,0 +1,20 @@
+.product-cooperate {
+  @include clearfix;
+
+  &__cell {
+    width: 130px;
+    text-align: center;
+    margin-right: 28px;
+    position: relative;
+    float: right;
+    height: 400px;
+    margin-bottom: 100px;
+    font-size: 18px;
+  }
+
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
